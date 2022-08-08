@@ -202,7 +202,7 @@ const authorize = async function(req, res, next )
                             {
                                 logger.info(' Validation mode is redirect ')
                                 res.session.transaction_id = response.data.id 
-                                const redirect = resonse.meta.authorization.redirect 
+                                const redirect = response.meta.authorization.redirect 
                                 return res.status(200).redirect(redirect)
                             }
                             
